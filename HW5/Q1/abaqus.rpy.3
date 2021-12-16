@@ -1,0 +1,80 @@
+# -*- coding: mbcs -*-
+#
+# Abaqus/CAE Release 2020 replay file
+# Internal Version: 2019_09_13-10.49.31 163176
+# Run by jiaoyi on Tue May 25 12:23:43 2021
+#
+
+# from driverUtils import executeOnCaeGraphicsStartup
+# executeOnCaeGraphicsStartup()
+#: Executing "onCaeGraphicsStartup()" in the site directory ...
+from abaqus import *
+from abaqusConstants import *
+session.Viewport(name='Viewport: 1', origin=(0.0, 0.0), width=415.624969482422, 
+    height=291.111114501953)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].maximize()
+from caeModules import *
+from driverUtils import executeOnCaeStartup
+executeOnCaeStartup()
+openMdb('Q1.cae')
+#: The model database "U:\CESG504\HW5 Q1\4\Q1.cae" has been opened.
+session.viewports['Viewport: 1'].setValues(displayedObject=None)
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=ON)
+p = mdb.models['Model-1'].parts['Part-1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+a = mdb.models['Model-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    optimizationTasks=OFF, geometricRestrictions=OFF, stopConditions=OFF)
+o3 = session.openOdb(name='U:/CESG504/HW5 Q1/4/Job-1.odb')
+#: Model: U:/CESG504/HW5 Q1/4/Job-1.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       6
+#: Number of Node Sets:          7
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=155.825, 
+    farPlane=214.051, width=100.332, height=54.2248, cameraPosition=(-77.9036, 
+    99.8154, 155.856), cameraUpVector=(0.285034, 0.674534, -0.680999), 
+    cameraTarget=(-34.922, 14.2271, -0.807999))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=155.839, 
+    farPlane=214.037, width=100.752, height=54.4518, viewOffsetX=1.68864, 
+    viewOffsetY=0.362737)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=144.942, 
+    farPlane=222.9, width=93.7066, height=50.6442, cameraPosition=(-139.205, 
+    66.4046, 140.21), cameraUpVector=(0.33906, 0.807561, -0.482581), 
+    cameraTarget=(-35.0564, 13.7538, -1.5554), viewOffsetX=1.57055, 
+    viewOffsetY=0.337371)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=145.41, 
+    farPlane=222.433, width=88.3685, height=47.7592, viewOffsetX=2.25742, 
+    viewOffsetY=3.93928)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=151.948, 
+    farPlane=217.764, width=92.3417, height=49.9065, cameraPosition=(-111.386, 
+    66.4046, 157.533), cameraUpVector=(0.244651, 0.807561, -0.536649), 
+    cameraTarget=(-35.0483, 13.7538, -0.950235), viewOffsetX=2.35892, 
+    viewOffsetY=4.11639)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=151.681, 
+    farPlane=217.98, width=92.1793, height=49.8188, cameraPosition=(-111.386, 
+    66.4046, 157.503), cameraTarget=(-35.0483, 13.7538, -0.980142), 
+    viewOffsetX=2.35477, viewOffsetY=4.10915)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=151.545, 
+    farPlane=218.146, width=92.0965, height=49.774, cameraPosition=(-111.386, 
+    68.4352, 156.876), cameraUpVector=(0.244651, 0.800655, -0.546899), 
+    cameraTarget=(-35.0483, 13.7686, -0.923054), viewOffsetX=2.35265, 
+    viewOffsetY=4.10545)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=151.547, 
+    farPlane=218.138, width=92.0975, height=49.7745, cameraPosition=(-110.854, 
+    68.4352, 157.13), cameraTarget=(-34.5162, 13.7686, -0.669331), 
+    viewOffsetX=2.35268, viewOffsetY=4.1055)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=151.613, 
+    farPlane=218.203, width=92.1375, height=49.7962, cameraPosition=(-113.322, 
+    68.4352, 156.013), cameraTarget=(-36.9842, 13.7686, -1.78678), 
+    viewOffsetX=2.3537, viewOffsetY=4.10728)
